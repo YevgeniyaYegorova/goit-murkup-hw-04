@@ -76,7 +76,6 @@ p {
 .nav-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 .head-nav {
   display: flex;
@@ -141,8 +140,13 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.site-nav :hover,
+.site-nav:hover,
 .site-nav:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
   color: var(--accent-color);
 }
 .site-nav .current {
@@ -222,6 +226,10 @@ p {
 
 .phone-icon:hover {
   fill: var(--accent-color);
+}
+
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 /* Главная */
 
@@ -355,6 +363,10 @@ p {
 }
 
 /* Команда */
+.team {
+  background-color: #f5f4fa;
+}
+
 .team-list .title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -533,7 +545,9 @@ address p {
 .contacts-footer li:first-child {
   margin-bottom: 9px;
 }
+
 /* Портфолио */
+
 /* Кнопки */
 .buttons {
   display: flex;
@@ -565,7 +579,8 @@ address p {
 }
 .button.secondary:hover,
 .button.secondary:focus {
-  background-color: #188ce8;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -579,10 +594,15 @@ address p {
   margin-left: -30px;
   /* justify-content: space-between; */
 }
-.cards .item {
+.cards .portfolio-item {
   flex-basis: calc(100% / 3 -30px);
   margin-left: 30px;
   margin-top: 30px;
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 .cart-title {
   color: var(--title-text-color);
